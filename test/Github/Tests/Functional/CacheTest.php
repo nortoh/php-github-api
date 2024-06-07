@@ -61,7 +61,7 @@ class CacheTest extends \PHPUnit\Framework\TestCase
             'Content-Type' => 'application/json',
         ];
 
-        $body = \GuzzleHttp\Psr7\stream_for(json_encode([
+        $body = \GuzzleHttp\Psr7\Utils::streamFor(json_encode([
             'login' => $username,
         ]));
 

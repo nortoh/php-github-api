@@ -135,7 +135,7 @@ class AbstractApiTest extends TestCase
             ->will($this->returnValue($this->getPSR7Response($expectedArray)));
 
         $client = $this->getMockBuilder('Github\Client')
-            ->setMethods(['getHttpClient'])
+            ->onlyMethods(['getHttpClient'])
             ->getMock();
         $client->expects($this->any())
             ->method('getHttpClient')
@@ -163,7 +163,7 @@ class AbstractApiTest extends TestCase
             ->will($this->returnValue($this->getPSR7Response($expectedArray)));
 
         $client = $this->getMockBuilder(\Github\Client::class)
-            ->setMethods(['getHttpClient'])
+            ->onlyMethods(['getHttpClient'])
             ->getMock();
         $client->expects($this->any())
             ->method('getHttpClient')
@@ -183,7 +183,7 @@ class AbstractApiTest extends TestCase
     protected function getAbstractApiObject($client)
     {
         return $this->getMockBuilder($this->getApiClass())
-            ->setMethods(null)
+            ->addMethods([])
             ->setConstructorArgs([$client])
             ->getMock();
     }
@@ -232,7 +232,7 @@ class AbstractApiTest extends TestCase
         return new Response(
             200,
             ['Content-Type' => 'application/json'],
-            \GuzzleHttp\Psr7\stream_for(json_encode($expectedArray))
+            \GuzzleHttp\Psr7\Utils::streamFor(json_encode($expectedArray))
         );
     }
 }
