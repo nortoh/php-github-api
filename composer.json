@@ -1,5 +1,5 @@
 {
-    "name": "knplabs/github-api",
+    "name": "nortoh/github-api",
     "type": "library",
     "description": "GitHub API v3 client",
     "homepage": "https://github.com/KnpLabs/php-github-api",
@@ -16,6 +16,9 @@
             "homepage": "http://ornicar.github.com"
         }
     ],
+    "replace": {
+        "knplabs/github-api": "^3.14.1"
+    },
     "require": {
         "php": "^7.2.5 || ^8.0",
         "ext-json": "*",
