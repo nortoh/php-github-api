@@ -2,7 +2,6 @@
     "name": "nortoh/github-api",
     "type": "library",
     "description": "GitHub API v3 client",
-    "minimum-stability": "dev",
     "homepage": "https://github.com/KnpLabs/php-github-api",
     "keywords": ["github", "gh", "api", "gist"],
     "license": "MIT",
