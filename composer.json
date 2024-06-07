@@ -17,9 +17,6 @@
             "homepage": "http://ornicar.github.com"
         }
     ],
-    "replace": {
-        "knplabs/github-api": "3.14.1"
-    },
     "require": {
         "php": "^7.2.5 || ^8.0",
         "ext-json": "*",
