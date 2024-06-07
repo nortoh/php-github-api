@@ -1,5 +1,5 @@
 {
-    "name": "nortoh/github-api",
+    "name": "nocworx/github-api",
     "type": "library",
     "description": "GitHub API v3 client",
     "minimum-stability": "dev",
