@@ -17,7 +17,7 @@
         }
     ],
     "replace": {
-        "knplabs/github-api": "^3.14.1"
+        "knplabs/github-api": "^3.0"
     },
     "require": {
         "php": "^7.2.5 || ^8.0",
